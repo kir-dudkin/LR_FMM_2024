@@ -1,0 +1,67 @@
+HEAD  1  0  10000
+CONT B B T T T T T T
+
+EQU STVS= 1.905
+EQU HTVS= 89.0
+EQU stvel= 0.4089
+EQU dtvel= 0.257
+
+HEXY GPOKR 0.0 0.0 0.0 HTVS STVS 0.0
+HEXY GTVS 0.0 0.0 0.0 HTVS STVS-0.02 0.0
+END
+
+ZPOKR GPOKR -GTVS # m = 3
+ZTVS (NPRT) GTVS # m = 2
+END
+
+CELL tvel
+SHEX Gtvel stvel HTVS 0.0
+RCZ Gpokr 0.0 0.0 0.0 HTVS dtvel/2+0.01
+RCZ GHyd 0.0 0.0 0.0 HTVS dtvel/2
+END
+
+Ztvel Gtvel -Gpokr # m = 2
+Zpokr Gpokr -GHyd # m = 4
+Zfuel GHyd # m = 1
+END
+
+NET NPRT  -stvel  -stvel*cos(30)*2 0.0 5 5
+
+T01 tvel tvel tvel 0 0
+T02 tvel tvel tvel tvel 0
+T03 tvel tvel tvel tvel tvel
+T04 0  tvel tvel tvel tvel
+T05 0 0 tvel tvel tvel
+END
+
+FINISH
+*
+***ИСТОЧНИКИ***
+RRS
+SOURCE 1
+S NAME=S1 SPECTRUM=SP1 PNT 0.0 0.0 HTVS/2
+END SOURCE
+SPECTRUM SP1
+ENERGY
+ 2E6
+PROBABILITY
+ 1.0
+END SPECTRUM SP1
+FINISH RRS
+RUGA
+KEFF
+REGTYPE STD
+ESTIMATION t
+REACTION 0
+ENERGY 0.0
+INTEGRALVOLUME 0
+SORT ESTIMATION ISOTOPE REACTION TIME ENERGY DOMAIN
+END
+FINISH
+NTOT 1000
+NSKI 50
+FINISH
+NAMV TEST
+MXSR 100
+DTZM 50
+FINISH

@@ -20,6 +20,7 @@ RCZ Gpokr 0.0 0.0 0.0 HTVS dtvel/2+0.01
 RCZ GHyd 0.0 0.0 0.0 HTVS dtvel/2
 END
 
+
 Ztvel Gtvel -Gpokr # m = 2
 Zpokr Gpokr -GHyd # m = 4
 Zfuel GHyd # m = 1

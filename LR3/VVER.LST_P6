@@ -1,0 +1,77 @@
+
+   STAGE: CALCULATION >>>
+
+Nuclide files loading begin...
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../500.hdf/008O_016.500.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../600.hdf/008O_016.600.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/008O_016.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../500.hdf/001H_001.500.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../600.hdf/001H_001.600.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/001H_001.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr090.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr090.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr091.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr091.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr092.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr092.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr094.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr094.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr096.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr096.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../1500.hdf/002He004.1500.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/002He004.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/008O_016.300.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/092U_238.300.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/092U_238.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/092U_235.300.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/092U_235.0.hdf'
+Done
+
+Energy SubGroup(ESG) cache initialization begin...
+Done
+  Begin of the TRAJECTORY MODULE calculation step data input.
+     NAMV VVER
+     MXSR 550
+     DTZM 50
+     FINISH
+  End of the TRAJECTORY MODULE calculation step data input.
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0565998 eV): 5.23232e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0417466 eV): 1.21353e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0326528 eV): 2.47448e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.00532715 eV): 3.28085e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0103898 eV): 5.5504e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.229263 eV): 5.44864e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(U235, mt = 18, energy before = 0.113777 eV): 2.1232e+07 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.183007 eV): 9.15504e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):   0.18300669108199930     
+ coordinates (x, y, z): 
+ -0.17420920709397208      -0.47422043528518371        175.44004436287230     
+ angles (cos x, cos y, cos z): 
+ -0.99043448434177916       0.13797126122274062       -1.8609952284638562E-003
+ region:            1
+ 
+PHYSICS_scatter(H1, mt = 2, energy before = 0.050269 eV): 8.70764e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):    5.0269040410779148E-002
+ coordinates (x, y, z): 
+  0.50644242973899256       -8.5109629394917174E-002   216.12642525550552     
+ angles (cos x, cos y, cos z): 
+ -0.94418462246576107       0.31228693449672318       0.10484402339584170     
+ region:            1
+ 
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0209653 eV): 2.06715e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):    2.0965298962869777E-002
+ coordinates (x, y, z): 
+ -0.19292480719776439      -0.47217602590253083        246.58790713327389     
+ angles (cos x, cos y, cos z): 
+ -0.91815216943338518      -0.25071051313761050      -0.30682378064133847     
+ region:            1
+ 

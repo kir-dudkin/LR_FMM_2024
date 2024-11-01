@@ -28,7 +28,7 @@ def write_fuel(x, T, num, file):
     St_C = 1.98
     St_U = 0.2
     St_Zr = 1 - St_U
-    mu_UZrC = (238 * St_U + 91 * St_Zr + 12 * St_C)* 1e-3
+    mu_UZrC = (235.2 * St_U + 91 * St_Zr + 12 * St_C)* 1e-3
     rho_fuel = 3640
     N = rho_fuel * N_a / mu_UZrC * 1e-30
     file.write(f"\n# {num} Fuel\nT={T}\n")
@@ -106,5 +106,5 @@ def plot_Keff_of_T():
     plt.xlabel("Температура, К")
     plt.xlabel ("k_eff")
     plt.show()
-
-plot_Keff_of_T()
+write_physics_dat(1500)
+run_kir(TARGET_PATH)

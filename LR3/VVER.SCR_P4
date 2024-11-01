@@ -1,0 +1,51 @@
+
+  WARNINGS in initial data for the KIR code:           0
+  ERRORS   in initial data for The KIR code:           0
+
+
+ Variant................................... VVER
+ Number of series simulated................                    50
+ Number of histories simulated on MPI task:                 50000
+
+ Variant................................... VVER
+ Number of series simulated................                   100
+ Number of histories simulated on MPI task:                100000
+
+ Variant................................... VVER
+ Number of series simulated................                   150
+ Number of histories simulated on MPI task:                150000
+
+ Variant................................... VVER
+ Number of series simulated................                   200
+ Number of histories simulated on MPI task:                200000
+
+ Variant................................... VVER
+ Number of series simulated................                   250
+ Number of histories simulated on MPI task:                250000
+
+ Variant................................... VVER
+ Number of series simulated................                   300
+ Number of histories simulated on MPI task:                300000
+
+ Variant................................... VVER
+ Number of series simulated................                   350
+ Number of histories simulated on MPI task:                350000
+
+ Variant................................... VVER
+ Number of series simulated................                   400
+ Number of histories simulated on MPI task:                400000
+
+ Variant................................... VVER
+ Number of series simulated................                   450
+ Number of histories simulated on MPI task:                450000
+
+ Variant................................... VVER
+ Number of series simulated................                   500
+ Number of histories simulated on MPI task:                500000
+
+ Variant................................... VVER
+ Number of series simulated................                   550
+ Number of histories simulated on MPI task:                550000
+ The task is successfully finished!
+ Process #           4 is ready to Finalize
+ Process #           4 is Finalized successfully

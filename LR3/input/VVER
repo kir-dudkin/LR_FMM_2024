@@ -1,0 +1,63 @@
+HEAD  1  0  10000
+CONT B B T T T T T T
+EQU H= 370.0
+EQU Hreg= 370.0/10
+
+HEXY Water 0.0 0.0 0.0 H 12.75/10
+RCZ Clad 0 0 0 H 9.1/20
+RCZ Gap 0 0 0 H (9.1 - 0.65 * 2)/20
+RCZ Fuel1 0 0 Hreg*0 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel2 0 0 Hreg*1 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel3 0 0 Hreg*2 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel4 0 0 Hreg*3 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel5 0 0 Hreg*4 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel6 0 0 Hreg*5 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel7 0 0 Hreg*6 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel8 0 0 Hreg*7 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel9 0 0 Hreg*8 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+RCZ Fuel10 0 0 Hreg*9 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+END
+
+ZWATER Water -Clad # m = 1
+ZCLAD Clad -Gap # m = 2
+ZGAP Gap -Fuel1 -Fuel2 -Fuel3 -Fuel4 -Fuel5 -Fuel6 -Fuel7 -Fuel8 -Fuel9 -Fuel10 # m = 3
+ZF1 Fuel1 # m = 4 z = 2
+ZF2 Fuel2 # m = 5 z = 3
+ZF3 Fuel3 # m = 6 z = 4
+ZF4 Fuel4 # m = 7 z = 5
+ZF5 Fuel5 # m = 8 z = 6
+ZF6 Fuel6 # m = 9 z = 7
+ZF7 Fuel7 # m = 10 z = 8
+ZF8 Fuel8 # m = 11 z = 9
+ZF9 Fuel9 # m = 12 z = 10
+ZF10 Fuel10 # m = 13 z = 11
+END
+
+FINISH
+*
+RRS
+SOURCE 1
+S NAME=S1 SPECTRUM=SP1 PNT 0 0 20
+END SOURCE
+SPECTRUM SP1
+ENERGY
+ 2E6
+PROBABILITY
+ 1.0
+END SPECTRUM SP1
+FINISH RRS
+RUGA
+KEFF
+REGTYPE STD
+ESTIMATION t
+REGION L1R11
+ENERGY 0
+END
+FINISH
+NTOT 1000
+NSKI 250
+FINISH
+NAMV VVER
+MXSR 550
+DTZM 50
+FINISH

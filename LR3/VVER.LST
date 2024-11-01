@@ -1,0 +1,192 @@
+
+ STAGE: INPUT >>>
+
+***** START OF PHYSICAL MODULE INPUT: 'Physical module (PHM)'
+FULL NUMBER OF MATERIALS IN PHM INPUT:      13
+***** FINISH OF PHYSICAL MODULE INPUT: 'Physical module (PHM)'
+      START OF GEOMETRY INPUT: NCG
+      COMPILATION - real64, COMPUTATION - real64
+ ****************************************************
+     HEAD  1  0  10000
+     CONT B B T T T T T T
+     EQU H= 370.0
+     EQU Hreg= 370.0/10
+     
+     HEXY Water 0.0 0.0 0.0 H 12.75/10
+     RCZ Clad 0 0 0 H 9.1/20
+     RCZ Gap 0 0 0 H (9.1 - 0.65 * 2)/20
+     RCZ Fuel1 0 0 Hreg*0 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel2 0 0 Hreg*1 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel3 0 0 Hreg*2 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel4 0 0 Hreg*3 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel5 0 0 Hreg*4 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel6 0 0 Hreg*5 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel7 0 0 Hreg*6 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel8 0 0 Hreg*7 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel9 0 0 Hreg*8 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     RCZ Fuel10 0 0 Hreg*9 Hreg (9.1 - (0.65 + 0.075) * 2)/20
+     END
+     
+     ZWATER Water -Clad # m = 1
+     ZCLAD Clad -Gap # m = 2
+     ZGAP Gap -Fuel1 -Fuel2 -Fuel3 -Fuel4 -Fuel5 -Fuel6 -Fuel7 -Fuel8 -Fuel9 -Fuel10 # m = 3
+     ZF1 Fuel1 # m = 4 z = 2
+     ZF2 Fuel2 # m = 5 z = 3
+     ZF3 Fuel3 # m = 6 z = 4
+     ZF4 Fuel4 # m = 7 z = 5
+     ZF5 Fuel5 # m = 8 z = 6
+     ZF6 Fuel6 # m = 9 z = 7
+     ZF7 Fuel7 # m = 10 z = 8
+     ZF8 Fuel8 # m = 11 z = 9
+     ZF9 Fuel9 # m = 12 z = 10
+     ZF10 Fuel10 # m = 13 z = 11
+     END
+     
+     FINISH
+                     MODULE NCG           
+      1  1         0     10000         0         0         1         8         0                                                                                                                                                                                
+ EPS= 0.373E-08  EPSP1= 1.00000023842   NSTRUC=  0
+ MAXOBJ       1  MAXMAT      13 MAXREG      11   NMIR       0  NUMB      13
+  NUMCZ      14    NUMZ      13  NCELS       1   NZWL       0
+  NXBOX            KKLD      72   KLIS     423  KNEXT   10523
+   KVOL      99    KMIZ   10584   KLCR   10623  KFMIR     110
+      end OF GEOMETRY INPUT.
+ ****************************************************
+   BEGIN OF SOURCE MODULE.
+     *
+     RRS
+     SOURCE 1
+     S NAME=S1 SPECTRUM=SP1 PNT 0 0 20
+     END SOURCE
+     SPECTRUM SP1
+     ENERGY
+      2E6
+     PROBABILITY
+      1.0
+     END SPECTRUM SP1
+     FINISH RRS
+-----------------------------------------------
+
+ ***** START OF REGISTRATION MODULE INPUT: RUGA
+
+     RUGA
+     KEFF
+     REGTYPE STD
+     ESTIMATION t
+     REGION L1R11
+     ENERGY 0
+     END
+     FINISH
+
+ ***** FINISH OF MODULE INPUT: RUGA
+
+-----------------------------------------------
+     NTOT 1000
+     NSKI 250
+     FINISH
+Parameters of the TRAJECTORY MODULE from input file: 
+    Number of Series to Skip (NSKI):                          250
+    Number of Batches per Series (NBAT):                        1
+    Number of Particles in Generation (NTOT):                1000
+End of TRAJECTORY MODULE input.
+Getting material base from physical module for std functionals registration...
+
+  WARNINGS in initial data for the KIR code:           0
+  ERRORS   in initial data for the KIR code:           0
+
+   STAGE: CALCULATION >>>
+
+Nuclide files loading begin...
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../500.hdf/008O_016.500.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../600.hdf/008O_016.600.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/008O_016.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../500.hdf/001H_001.500.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../600.hdf/001H_001.600.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/001H_001.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr090.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr090.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr091.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr091.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr092.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr092.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr094.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr094.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../800.hdf/040Zr096.800.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/040Zr096.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../1500.hdf/002He004.1500.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/002He004.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/008O_016.300.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/092U_238.300.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/092U_238.0.hdf'
+RSA: Loading of crossections from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../300.hdf/092U_235.300.hdf'
+TI: Loading of temperature independent block from ACE file 'D:\KIR_ed\KIR_LIB\e-71.njoy.tpc-ed.hdf\cfg_tpc\../0.hdf/092U_235.0.hdf'
+Done
+
+Energy SubGroup(ESG) cache initialization begin...
+Done
+  Begin of the TRAJECTORY MODULE calculation step data input.
+     NAMV VVER
+     MXSR 550
+     DTZM 50
+     FINISH
+  End of the TRAJECTORY MODULE calculation step data input.
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0309215 eV): 6.41945e-06 is out of range [1e-05; 2e+07]
+  --- Time of Simulation for Current Seria
+      Current:      0:00:06.94  Total:       0:00:06  Remaining:       0:01:09
+  --- Time of Simulation for Current Seria
+      Current:      0:00:05.50  Total:       0:00:12  Remaining:       0:00:49
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0570215 eV): 6.5464e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0131245 eV): 6.28859e-06 is out of range [1e-05; 2e+07]
+  --- Time of Simulation for Current Seria
+      Current:      0:00:05.54  Total:       0:00:17  Remaining:       0:00:44
+PHYSICS_scatter(H1, mt = 2, energy before = 0.143072 eV): 2.76569e-06 is out of range [1e-05; 2e+07]
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0786193 eV): 4.06466e-06 is out of range [1e-05; 2e+07]
+  --- Time of Simulation for Current Seria
+      Current:      0:00:05.55  Total:       0:00:23  Remaining:       0:00:38
+  --- Time of Simulation for Current Seria
+      Current:      0:00:05.53  Total:       0:00:29  Remaining:       0:00:33
+PHYSICS_scatter(H1, mt = 2, energy before = 0.00892376 eV): 9.10734e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):    8.9237641355726111E-003
+ coordinates (x, y, z): 
+  0.39767744422402501       0.35017846913559730        142.09282472756553     
+ angles (cos x, cos y, cos z): 
+ -0.17957888170802105      -0.47502008369763410       0.86145652550107776     
+ region:            1
+ 
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.23  Total:       0:00:36  Remaining:       0:00:36
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.28  Total:       0:00:43  Remaining:       0:00:29
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.23  Total:       0:00:50  Remaining:       0:00:21
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.33  Total:       0:00:58  Remaining:       0:00:14
+PHYSICS_scatter(H1, mt = 2, energy before = 0.0255169 eV): 6.23094e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):    2.5516880372382422E-002
+ coordinates (x, y, z): 
+ -0.28854242914685990      -0.61764981562513810        71.753868487963075     
+ angles (cos x, cos y, cos z): 
+ -0.36825484822077320       0.85674722314015717      -0.36107140900869650     
+ region:            1
+ 
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.24  Total:       0:01:05  Remaining:       0:00:07
+PHYSICS_scatter(H1, mt = 2, energy before = 0.015475 eV): 9.91918e-06 is out of range [1e-05; 2e+07]
+ Warning, particle terminated by reason: energy after scattering
+ energy is exceeding interval [1e-5, 20e+6] eV
+ last reaction number (endf/b):            2
+ current energy(eV):    1.5475015739801808E-002
+ coordinates (x, y, z): 
+ -0.53096260535839568       0.27367497721219225        178.68534808557266     
+ angles (cos x, cos y, cos z): 
+ -0.99556334200013774       -1.8447892422366441E-002  -9.2267585482061210E-002
+ region:            1
+ 
+  --- Time of Simulation for Current Seria
+      Current:      0:00:07.28  Total:       0:01:12  Remaining:       0:00:00

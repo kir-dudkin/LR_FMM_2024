@@ -1,0 +1,170 @@
+
+ The KIR code (educational version)
+ Date and Time  : 2024/11/01    09:50:28
+ Input Data File: VVER
+
+  
+==========================
+TRAJECTORY MODULE output
+==========================
+  
+ Analogous algorithm for simulation was used
+  
+On root MPI thread only!
+ Number of Particles per Batch.........:              1000
+ Number of Batches per Series..........:                 1
+ Full Number of Series.................:               550
+ Number of Series Skipped..............:               250
+ Number of Series Used.................:               300
+ Full Number of histories used.........:            550000
+ Full Number of collisions.............:          20265978
+ Full Number of pseudocollisions.......:                 0
+ Number of Registration Particles Used.:            300000
+  
+ Total Task Time :      1.185 min. or         0:01:11.120
+ Time per History: 0.129E-03 sec.
+ Number of Collisions per One History: 0.36847E+02
+ Run Time per One Collision: 0.351E-05 sec.
+  
+----------------MPI mode----------------
+ MPI bank regime.......................:                 1
+ Number of MPI Threads.................:                 8
+ Number of Particles per Batch.........:              8000
+ Number of Series Used for Registration:               300
+ Number of Registration Particles Used.:           2400000
+ 
+|     MPI #|  full histories| collision number| simul. time (min)| barrier time (min)| exchange time (min)|reduce time (min)| disk write (min)| speed (col/min)|
+|         0|          550000|         20265978|             1.080|              0.099|               0.002|            0.001|            0.001|        1.88E+07|
+|         1|          550000|         20297843|             1.093|              0.086|               0.003|            0.000|            0.002|        1.86E+07|
+|         2|          550000|         20250279|             1.087|              0.092|               0.003|            0.000|            0.001|        1.86E+07|
+|         3|          550000|         20272388|             1.091|              0.089|               0.003|            0.000|            0.001|        1.86E+07|
+|         4|          550000|         20259742|             1.096|              0.084|               0.002|            0.000|            0.002|        1.85E+07|
+|         5|          550000|         20271994|             1.088|              0.092|               0.003|            0.000|            0.001|        1.86E+07|
+|         6|          550000|         20236871|             1.083|              0.096|               0.003|            0.000|            0.001|        1.87E+07|
+|         7|          550000|         20275508|             1.091|              0.089|               0.003|            0.000|            0.001|        1.86E+07|
+  
+======++===========================
+END of the TRAJECTORY MODULE output
+========++=========================
+
+#================================#
+#REGISTRATION MODULE FINAL OUTPUT#
+#================================#
+
+
+Total Registration Task Time :      0.726 min. or         0:00:43.570
+
+Keff with minimal sdt.dev. is:
+
+ Keff by t/c/a/f
+      1.01756118
+ (+-) 0.00044211 ( 4.34E-02 %)
+ Figure-of-merit [1/(time*sdt.dev^2)]:  7.05E+06 min^-1
+
+Keff by other estimations and their combinations:
+
+ Keff by tr.s.col.(t)
+      1.01788435
+ (+-) 0.00081610 ( 8.02E-02 %)
+
+ Keff by col.(c)
+      1.01767543
+ (+-) 0.00075863 ( 7.45E-02 %)
+
+ Keff by t/c
+      1.01770947
+ (+-) 0.00075627 ( 7.43E-02 %)
+
+ Keff by abs.(a)
+      1.01752633
+ (+-) 0.00046629 ( 4.58E-02 %)
+
+ Keff by t/a
+      1.01758881
+ (+-) 0.00044322 ( 4.36E-02 %)
+
+ Keff by c/a
+      1.01755335
+ (+-) 0.00044609 ( 4.38E-02 %)
+
+ Keff by t/c/a
+      1.01758322
+ (+-) 0.00044303 ( 4.35E-02 %)
+
+ Keff by fiss.(f)
+      1.01701177
+ (+-) 0.00079544 ( 7.82E-02 %)
+
+ Keff by t/f
+      1.01743558
+ (+-) 0.00059834 ( 5.88E-02 %)
+
+ Keff by c/f
+      1.01736174
+ (+-) 0.00058459 ( 5.75E-02 %)
+
+ Keff by t/c/f
+      1.01739055
+ (+-) 0.00058251 ( 5.73E-02 %)
+
+ Keff by a/f
+      1.01750749
+ (+-) 0.00046565 ( 4.58E-02 %)
+
+ Keff by t/a/f
+      1.01756752
+ (+-) 0.00044233 ( 4.35E-02 %)
+
+ Keff by c/a/f
+      1.01753088
+ (+-) 0.00044511 ( 4.37E-02 %)
+
+ Keff by t/c/a/f
+      1.01756118
+ (+-) 0.00044211 ( 4.34E-02 %)
+
+neutron balance (only for analogous mode): 1.00161417
+
+STD Functionals Block # 1
+
+- Isotope: Mixed
+- Flux
+- Energy: 0.E+00
+- By Region
+    Estimation:    tr.s.col.(t) D(tr.s.col.(t))
+         Region
+              1  3.65865459E+01  1.28530082E-02
+              2  5.22586996E-01  5.73844289E-03
+              3  1.37916882E+00  9.90315086E-03
+              4  2.04661822E+00  1.10721789E-02
+              5  2.53969042E+00  1.26895703E-02
+              6  2.81735170E+00  9.32129070E-03
+              7  2.71441145E+00  1.03341652E-02
+              8  2.32054894E+00  1.05811171E-02
+              9  1.81177012E+00  1.04242830E-02
+             10  1.15473792E+00  7.93347153E-03
+             11  4.36089545E-01  5.28261573E-03
+_______________________________________________ 
+
+
+
+#=================================#
+#END OF REGISTRATION MODULE OUTPUT#
+#=================================#
+
+  **************** NCG            *********************
+   20269727 CALL GMNEWT                          KLOOP=    43706301
+  128942454 GETTING FROM LEARN-LISTS                     0 BAD ENVELOPE EXITS
+          0 SHORT CALL GG
+          0 LONG CALL GG
+          0 REFLECTIONS FROM MATTER
+        321 GETTING CODE-ZONES AT COMMON SEARCH
+          0 CHANGING ZONES WITH TABLE
+          0 RECONSTRUCTIONS
+          0 RESERVE
+          0 ERROR ENDS OF PATH
+          0 MIRROR REFLECTIONS
+   23439323 GOING OUT FROM CONTAINER
+   23435574 NOT REFLECTION SYMMETRY
+          0 LOOPS OF ADAPTATION
+  ***************************************************

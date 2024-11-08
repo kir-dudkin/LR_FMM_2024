@@ -30,7 +30,7 @@ def write_cell(n_reg, NTOT):
         for i in range(n_reg):
             f.write(f"ZF{i + 1} Fuel{i + 1} # m = {i + 4} z = {i + 2}\n")
         f.write("END")
-    KIR.write_end_of_file(regions=n_reg + 1, estimation="t", NTOT=NTOT, NSKI=250, MSXR=550)
+    KIR.write_end_of_file(regions=n_reg + 1, estimation="c", NTOT=NTOT, NSKI=250, MSXR=550)
 
 
 def read_regions_data(n_reg, qv):
